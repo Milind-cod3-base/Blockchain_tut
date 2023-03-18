@@ -11,6 +11,9 @@ class Block:
         # contains the index of the block
         self.index = index
 
+
+        self.size = len(json.dumps(self.__dict__, sort_keys=True).encode('utf-8'))
+
         # stores the image/bogines
         self.image_data = image_data
         

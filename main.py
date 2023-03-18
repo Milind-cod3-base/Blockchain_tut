@@ -7,11 +7,16 @@ from time import time
 class Block:
     
     # create a constructor
-    def __init__(self, index, transactions, timestamp, previous_hash):
+    def __init__(self, index, timestamp, previous_hash, image_data=None):
         # contains the index of the block
         self.index = index
 
-        self.transactions = transactions
+        # stores the image/bogines
+        self.image_data = image_data
+        
+        #self.transactions = transactions
+
+
         # creation time of the block
         self.timestamp = timestamp
         # contains/knows hash of the previous block
@@ -38,15 +43,19 @@ class Blockchain:
 
     # create the genesis block to store it in the chain
     def create_genesis_block(self):
-        pass
+        # create a instance of a block class
+        # index=0, no transaction to include in genesis block
+        return Block(0, [], time(), "0")
     
     # get the latest/last block
     def get_latest_block(self):
-        pass
+        return self.chain[-1]
     
     # add a new block into the chain
     def add_block(self):
         pass
+
+        
     
     # check the validity/corruption of chain
     def is_chain_valid(self):

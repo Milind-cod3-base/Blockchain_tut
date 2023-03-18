@@ -2,3 +2,6 @@
 2. hexadecimal numbers are of base 16 while decimal numbers are of base 10
 3. for ex. 123 = 1 x 10^2 + 2 x 10^1 + 3 x 10^0 in decimal 
     and 123 = 1 x 16^2 + 2 x 16^1 + 3 x 16^0
+4. to get the attributes of a class, i can simply use the __dict__ attributes
+    for example, if a class is Block and I need all info, i can simply write 
+    Block.__dict__ and I will get all the details.

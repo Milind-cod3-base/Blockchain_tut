@@ -22,14 +22,36 @@ class Block:
 
     # function to calculate hash of given function
     def caculate_hash(self):
-        
+
         block_string = json.dumps(self.__dict__, sort_keys=True)
         return hashlib.sha256(block_string.encode()).hexdigest()
 
 
 # class to add and validate the blocks in a chain
 class Blockchain:
-    pass
+
+    # blockchain constructor
+    def __init__(self):
+
+        # list which contains genesis block as the first element
+        self.chain = [self.create_genesis_block()]
+
+    # create the genesis block to store it in the chain
+    def create_genesis_block(self):
+        pass
+    
+    # get the latest/last block
+    def get_latest_block(self):
+        pass
+    
+    # add a new block into the chain
+    def add_block(self):
+        pass
+    
+    # check the validity/corruption of chain
+    def is_chain_valid(self):
+        pass
+
 
 
 #print("all ok")
